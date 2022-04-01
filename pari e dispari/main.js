@@ -6,6 +6,7 @@ Dichiariamo chi ha vinto.*/
 
 let pari_o_dispari = prompt('scegli pari o dispari')
 console.log(pari_o_dispari)
+
 let numero_giocatore = parseInt(prompt('inserisci un numero da 1 a 5'))
 console.log(numero_giocatore)
 
@@ -18,10 +19,25 @@ function random_number(min, max) {
 console.log(numero_pc)
 
 let somma = (numero_giocatore + numero_pc)
+console.log(somma)
 
+let oddEvenResult;
 
-if (somma % 2 == 0) {
-    console.log('pari')
+function oddEven(numero_giocatore, numero_pc) {
+    let somma = (numero_giocatore + numero_pc)
+    if (somma % 2 == 0) {
+        return pari
+    } else {
+        return dispari
+    }
+}
+
+//let risultato;
+
+if ((somma % 2 == 0) && (pari_o_dispari == 'pari')) {
+    console.log('hai vinto')
+} else if ((somma % 2 != 0) && (pari_o_dispari == 'dispari')) {
+    console.log('hai vinto')
 } else {
-    console.log('dispari')
+    console.log('hai perso')
 }
